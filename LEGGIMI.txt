@@ -1,0 +1,24 @@
+JARVIS OFFLINE LAB - POC 0.1
+Prova isolata, senza collegamenti al progetto Jarvis R4, a Google o a servizi AI.
+
+PUBBLICAZIONE GRATUITA CON GITHUB PAGES
+1. Crea un account su github.com (se non ne hai uno).
+2. Crea un nuovo repository PUBBLICO chiamato jarvis-offline-lab.
+3. Carica nella radice del repository: index.html, app.js, sw.js, manifest.webmanifest, icon-192.png, icon-512.png.
+   Non caricare dati reali, backup personali o credenziali.
+4. Vai in Settings > Pages, scegli Deploy from a branch, branch main, cartella /(root), Save.
+5. Quando GitHub Pages ha completato la pubblicazione, apri su Android:
+   https://TUO-UTENTE.github.io/jarvis-offline-lab/
+6. Apri con Chrome, attendi il caricamento, poi menu ⋮ > Installa app oppure Aggiungi a schermata Home.
+7. Apri l'app una prima volta online, poi attiva la modalità aereo e riprova ad aprirla dall'icona.
+8. Registra una spesa, chiudi completamente e riapri: il saldo e la spesa devono restare.
+9. Premi Esporta backup JSON e verifica che il file sia stato salvato.
+
+LIMITI
+- Nessuna sincronizzazione fra dispositivi e nessuna AI.
+- Non usare dati personali o finanziari reali: repository e codice sono pubblici.
+- La prova usa IndexedDB: cancellare i dati del sito/browser può eliminare le registrazioni.
+- L'esportazione JSON è prevista; il ripristino da JSON NON è implementato.
+- L'indicatore di rete usa navigator.onLine, non verifica l'accessibilità effettiva a internet.
+- Test sul dispositivo Android ancora da eseguire.
+- Per aggiornare il Service Worker in futuro incrementare il nome CACHE in sw.js.
